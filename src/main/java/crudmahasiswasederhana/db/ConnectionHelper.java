@@ -4,7 +4,7 @@
  */
 package crudmahasiswasederhana.db;
 
-import com.mysql.cj.xdevapi.Statement;
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -33,7 +33,7 @@ public class ConnectionHelper {
                         url,
                        username,
                         pass);
-                st = (Statement) connect.createStatement();
+                st = connect.createStatement();
                 JOptionPane.showMessageDialog(null,"Terkoneksi");
                 System.out.println("Koneksi berhasil.");
             }catch(ClassNotFoundException | SQLException e){
